@@ -1,0 +1,24 @@
+@font-face{
+    font-family: ftyspeedy;
+    src: url("fonts/ftyspeedy.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: hardrace;
+    src: url("fonts-hardrace.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+:root {
+    --font-prymary: "ftyspeedy", sans-serif;
+    --font-secondary: "hardrace", sans-serif;
+}
