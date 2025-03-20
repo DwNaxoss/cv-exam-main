@@ -1,13 +1,32 @@
 @import url(styles/colors.css);
 @import url(styles/fonts.css);
 
+/* Generic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h2{
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: var(--color-titre);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-family: var(--font-primary);
+    font-size: 300%;
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.2);
+    text-shadow: 3px 3px 6px #f9b3d1;
+}
+
+h2 {
     color: var(--color-titre);
     font-family: var(--font-secondary);
     text-transform: uppercase; 
@@ -16,17 +35,30 @@ h2{
     text-align: center;
 }
 
-p{
+h3 {
+    font-family: var(--font-primary);
+    color: var(--color-principal);
+    font-size: 150%;
+}
+
+h3:hover{
+    color: var(--color-navbar);
+}
+
+p {
     font-size: x-large;
 }
 
-
-
-html {
-    scroll-behavior: smooth;
+img {
+    margin-top: 5em;
+    margin-bottom: 1.3em;
+    max-width: 50%;
+    height: auto;
+    border-radius: 15%;
 }
 
-nav{
+/* Navigation styles */
+nav {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -36,24 +68,27 @@ nav{
     z-index: 1000;
     border-radius: 15px;
     background-color: rgba(249, 179, 209, 0.7);
-    
 }
 
-nav ul{
+nav ul {
     justify-content: space-between;
     display: flex;
     list-style: none;
 }
 
-.retour_menu{
+nav ul li a {
+    text-decoration: none;
+    font-family: var(--font-primary);
+}
+
+.menu-return {
     display: flex;
     justify-content: left;
     padding: 1em;
     padding-left: 5em;
-
 }
 
-.nav_bar_item{
+.menu-items {
     display: flex;
     justify-content: right;
     gap: 10em;
@@ -61,87 +96,62 @@ nav ul{
     padding-right: 5em;
 }
 
-nav ul li a{
-    text-decoration: none;
-    font-family: var(--font-prymary);
-}
-
-#martin{
+/* Section: Martin */
+#section-martin {
     background-color: var(--color-background);
     width: 100%;
-    height: 50em;
+    height: 45em;
 }
 
-.principal_div_martin{
+.martin-container {
     padding-top: 5em;
     padding-left: 2em;
     display: flex;
     width: 100%;
 }
 
-.contenu_gauche{
+.martin-left {
     text-align: center;
     flex: 1;
 }
 
-.contenu_droite{
+.martin-right {
     display: flex;
     flex: 1;
     align-items: center;
     flex-direction: column;
     gap: 5em;
-
 }
 
-img{
-    margin-top: 5em;
-    margin-bottom: 5em;
-    max-width: 50%;
-    height: auto;
-    border-radius: 15%;
+.martin-description {
+    color: var(--color-secondary);
 }
 
-.logo_contenaire{
+.contact-icons {
     display: flex;
     justify-content: space-around;
     gap: 3em;
-    margin-top: -50px;
+    margin-top: -5em
 }
 
-.logo_link{
+.contact-link {
     display: flex;
     justify-content: center;
 }
 
-.logo_link img{
+.contact-link img {
     width: 10em;
     height: 10em;
 }
 
-h1{
-    color: var(--color-titre);
-    margin-top: 3em;
-    margin-bottom: 3em;
-    font-family: var(--font-prymary);
-    font-size: 300%;
-}
-
-.martin_p{
-    color: var(--color-secondary);
-}
-
-.martin_h3{
-    color: var(--color-principal);
-    font-family: var(--font-prymary);
-}
-
-#moi{
+/* Section: About Me */
+#section-about-me {
     background-color: var(--color-background);
     width: 100%;
     height: 50em;
 }
 
-.principal_div_moi{
+.about-me-container {
     padding-top: 5em;
     padding-left: 2em;
     display: flex;
@@ -149,40 +159,35 @@ h1{
     align-items: center;
 }
 
-.contenu_moi{
+.about-me-content {
     display: flex;
-    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les divs horizontalement */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 3em;
 }
 
-.square{
-    width: 30em; /* Largeur fixe pour un carré */
+.about-me-item {
+    width: 30em;
     height: 20em;
-    display: flex; /* Active Flexbox pour centrer le contenu */
-    flex-direction: column; /* Aligne le contenu verticalement */
-    justify-content: center; /* Centre verticalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.contenu_h3{
-    color: var(--color-principal);
-    font-family: var(--font-prymary);
-}
-
-.contenu_p{
+.about-me-description {
     color: var(--color-secondary);
 }
 
-
-#experience{
+/* Section: Experience */
+#section-experience {
     background-color: var(--color-background);
     width: 100%;
     height: 50em;
 }
 
-.principal_div_experience{
+.experience-container {
     padding-top: 5em;
     padding-left: 2em;
     display: flex;
@@ -190,104 +195,101 @@ h1{
     height: 100%;
 }
 
-.contenu_haut{
+.experience-top,
+.experience-middle,
+.experience-bottom {
     display: flex;
-    flex-direction: raw;
+    flex-direction: row;
     flex: 1; 
     width: 100%;
     padding-left: 5em;
+}
+
+.experience-top {
     padding-top: 2em;
     justify-content: center;
 }
 
-.contenu_millieu{
-    display: flex;
-    flex-direction: raw;
-    flex: 1; 
-    width: 100%;
-    padding-left: 5em;
+.experience-middle {
     justify-content: right;
 }
 
-.contenu_bas{
-    display: flex;
-    flex-direction: raw;
-    flex: 1;
-    width: 100%;
-    padding-left: 5em;
+.contenu_bas {
     justify-content: left;
 }
 
-.experience_p{
+.experience-description {
     color: var(--color-secondary);
     margin-left: 5em;
     max-width: 60%;
 }
 
-.experience_h3{
-    color: var(--color-principal);
-    font-family: var(--font-prymary);
-}
-
-#competence{
+/* Section: Skills */
+#section-skills {
     background-color: var(--color-background);
     width: 100%;
     height: 50em;
 }
 
-
-.principal_div_competence{
+.skills-container {
     padding-top: 5em;
     padding-left: 2em;
     padding-right: 2em;
 }
 
-.contenu_competence{
+.skills-content {
     display: flex;
-    flex-direction: raw;
+    flex-direction: row;
     align-items: stretch;
     padding-top: 2em;
     gap: 2em;
 }
 
-.contenu_competence > div{
+.skills-content > div {
     flex: 1;
 }
 
-.h3_competence{
+.skills-title {
     color: var(--color-principal);
     padding-bottom: 2em;
     text-align: center;
-    font-family: var(--font-prymary);
 }
 
-.competence_p{
+.skills-description {
     color: var(--color-secondary);
     text-align: center;
 }
 
+/* Footer */
 #footer {
-    background-color: var(--color-background); /* Utilise la couleur de fond déjà définie */
-    color: var(--color-secondary); /* Texte avec la couleur secondaire */
-    padding: 2em 1em; /* Ajoute de l'espace interne */
-    text-align: center; /* Centre le contenu */
+    background-color: var(--color-background);
+    color: var(--color-secondary);
+    padding: 2em 1em;
+    text-align: center;
 }
 
-.footer_content {
-    max-width: 1200px; /* Limite la largeur du contenu */
-    margin: 0 auto; /* Centre le contenu horizontalement */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer_links {
-    margin-top: 1em; /* Ajoute un espace au-dessus des liens */
+.footer-links {
+    margin-top: 1em;
     display: flex;
-    justify-content: center; /* Centre les liens horizontalement */
-    gap: 2em; /* Ajoute un espace entre les liens */
+    justify-content: center;
+    gap: 2em;
+    color: var(--color-principal);
 }
 
-.footer_links a {
-    text-decoration: none; /* Supprime le soulignement des liens */
-    color: var(--color-principal); /* Utilise la couleur principale pour les liens */
-    font-family: var(--font-prymary); /* Utilise la police principale */
+.footer-links a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
     font-weight: bold;
 }
+
+/* Animations */
+/* Add animations here */
+
+/* Media Queries */
+/* Add media queries here */
